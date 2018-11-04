@@ -16,14 +16,12 @@ int main()
     if((passwd=getpwuid(getuid()))==NULL) // if can`t find user in /etc/passwd(no user exists)
     {
         printf("can`t find user\n");
-        pam_strerror(pamh, code);
         exit(-1);
     }
     code = pam_start("pam_aware",passwd->pw_name,&conv_function,&pamh);
     if(code != PAM_SUCCESS)
     {
-        printf("error\n");
-        pam_strerror(pamh, code);
+        printf("error %s\n",pam_strerror(pamh, code));
         exit(-10);
     }
     block_kb_interrupt();
