@@ -1,5 +1,5 @@
 # pam_aware
-pam_aware - config file with modules that are loaded by pam to auth user
-could be anything but i used default linux auth (with /etc/passwd)
-pam_aware.cpp - source code for the app
-bin/a.out - executable linux binary
+<b>pam_aware</b> - config file with modules that are loaded by pam to auth user <br/>
+could be anything but i used default linux auth (with /etc/passwd)<br/>
+<b>pam_aware.cpp</b> - source code for the app<br/>
+<b>bin/a.out</b> - executable linux binary
